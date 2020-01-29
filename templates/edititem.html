@@ -1,0 +1,46 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="row">
+		<div class="col-md-12" style='background-color:#021F40'>
+		<div class="col-md-10 padding-none">
+			<h1 class='white'>Catalog App</h1>
+
+		</div>
+		<div class="col-md-2 padding-none"> <br>
+			{% if 'username' not in login_session%} <a href="{{url_for('showLogin')}}" class='button'>Login</a>
+			{% else %} <a href="{{url_for('gdisconnect')}}" class='button'>LogOut</a>
+			{% endif %}
+			
+		</div>
+	</div> </div>
+	
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>Edit Item</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">
+			<form action="{{url_for('editItem',itemname=item.name)}}" method = "post">
+				<div class="form-group">
+					<label for="name">Title:</label>
+					<input type ="text" maxlength="100" class="form-control" name="name" value="{{item.name }}">
+
+					<label for="description">Description:</label>
+					<textarea class="form-control" maxlength="250" rows="3" name="description">{{item.description}}</textarea>
+					<label for="name">Category:</label>
+					<select name='category'>
+					{% for category in categories %}
+					<option value={{category.name}}>{{category.name}}
+					{% endfor %}
+					</select>
+					<br> <br><br>
+					<button type="submit" class="btn btn-default" id="submit" type="submit"> 
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Submit</button>
+					
+				</div>
+			</form>
+		</div>
+	</div>
+	
+{% endblock %}

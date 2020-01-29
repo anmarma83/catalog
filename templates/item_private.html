@@ -1,0 +1,64 @@
+{% extends "main.html" %}
+{% block content %}
+
+
+	<div class="row">
+		<div class="col-md-12" style='background-color:#021F40'>
+		<div class="col-md-10 padding-none">
+			<h1 class='white'>Catalog App</h1>
+
+		</div>
+		<div class="col-md-2 padding-none"> <br>
+			{% if 'username' not in login_session%} <a href="{{url_for('showLogin')}}" class='button'>Login</a>
+			{% else %} <a href="{{url_for('gdisconnect')}}" class='button'>LogOut</a>
+			{% endif %}
+		</div>
+	</div>
+	<hr> <br> <br> <br> <br>
+	
+	
+	
+	<div class="row row_me">
+	<div class='col-md-1'></div>
+	<div class='col-md-3 row_me'>
+	<div class="row">
+	<a href="{{url_for('showItems',name=category.name)}}"><h2 class='t_style'>Categories</h2> </a>
+	</div>
+	{% for category in categories %}
+		
+			<div class="row">
+				
+					<div class="col-md-6 category-list">
+						<a href="{{url_for('showItems',name=category.name)}}"><h3 class='h3_style'>{{category.name}}</h3></a>
+					</div>
+				<div class="col-md-1"></div>
+			</div>
+		
+	{% endfor %}
+	</div>
+	
+	<div class='col-md-7 row_me'>
+	<div class="row">
+	{% if 'username' in login_session%} <a href="{{url_for('newItem')}}" class='h3_style'>Add Item</a>
+			
+			{% endif %}
+	<h2 class='t_style'>{{category.name}} Items({{count}} items)</h2>
+	</div>
+	{% for item in items %}
+		
+			<div class="row">
+				
+					<div class="col-md-7 category-list">
+					
+					<a href="{{url_for('itemInfo',category=item.category.name, item=item.name)}}"><h3 class='h3_style'>{{item.name}} <label style='color:#DADADA'>({{item.category.name}})</label></h3></a>
+					
+					</div>
+				<div class="col-md-1"></div>
+			</div>
+		
+	{% endfor %}
+	</div>
+	<div class='col-md-1'></div>
+	</div>
+
+{% endblock %}

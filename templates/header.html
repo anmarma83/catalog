@@ -1,0 +1,13 @@
+<div class="row">
+		<div class="col-md-12" style='background-color:#021F40'>
+		<div class="col-md-10 padding-none">
+			<h1 class='white'>Catalog App</h1>
+
+		</div>
+		<div class="col-md-2 padding-none"> <br>
+			{% if 'username' not in login_session%} <a href="{{url_for('showLogin')}}" class='button'>Login</a>
+			{% else %} <a href="{{url_for('gdisconnect')}}" class='button'>LogOut</a>
+			{% endif %}
+			
+		</div>
+	</div> </div>
