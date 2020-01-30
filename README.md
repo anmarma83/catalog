@@ -1,7 +1,7 @@
 # Linux Server Configuration
 ## Catalog Application
 A basic steps for installation of Ubuntu Linux on a virtual machine to host a Flask web application. This includes the installation of updates, securing the system from a number of attack vectors and installing/configuring web and database servers.
-##Information of accessing
+## Information of accessing
 
 - ip address: 3.123.20.102
 - ssh prot : 2200
