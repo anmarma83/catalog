@@ -2,11 +2,11 @@
 ## Catalog Application
 A basic steps for installation of Ubuntu Linux on a virtual machine to host a Flask web application. This includes the installation of updates, securing the system from a number of attack vectors and installing/configuring web and database servers.
 ##Information of accessing
-```
-### ip address: 3.123.20.102
-### ssh prot : 2200
-## URL : http://ec2-3-123-20-102.eu-central-1.compute.amazonaws.com
-```
+
+- ip address: 3.123.20.102
+- ssh prot : 2200
+- URL : http://ec2-3-123-20-102.eu-central-1.compute.amazonaws.com
+
 # Step by Step Walkthrough
 ## 1. Launch your Virtual Machine and log in
 I accessed the lightsail instance using SSH with the following command:
