@@ -194,3 +194,8 @@ psql
 
 ## PermitRootLogin no
 ### Then we need to restart SSH with service ssh restart.
+
+
+# Third-Party Resources
+[![N|INSTALL GIT](https://cldup.com/dTxpPi9lDf.thumb.png)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
