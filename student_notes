@@ -1,0 +1,5 @@
+private key in file named : private_key
+paswpharse: md5  (please notes after number 5 there are two space (double space))
+password for grader is : grader
+
+you can ssh by: ssh -i privat_key grader@3.123.20.102 -p 2200
