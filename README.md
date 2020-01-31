@@ -119,7 +119,7 @@ psql
 ##### Then to setup Catalog project I cloned the Catalog app repository inside the /var/www/ and followed the README instructions. I made additional changes for the project to work with PostgreSQL. I changed /instance/database_setup.py file from
 
 `` SQLALCHEMY_DATABASE_URI = "sqlite:///../catalog/catalog.db" ``
-####to
+#### to
 
 `` SQLALCHEMY_DATABASE_URI = "postgresql://catalog:password@localhost/catalog"  ``
 #### And also changed /catalog/project.py file from
